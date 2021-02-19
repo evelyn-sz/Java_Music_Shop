@@ -57,4 +57,9 @@ public class BagpipeTest {
         assertEquals(BagpipeType.SCOTTISH, bagpipes.getBagpipeType());
         assertEquals(BagpipeType.NONSCOTTISH, bagpipes2.getBagpipeType());
     }
+
+    @Test
+    public void canPlay(){
+        assertEquals("Playing: wee wee wee", bagpipes.play("wee wee wee"));
+    }
 }

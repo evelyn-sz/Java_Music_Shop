@@ -1,10 +1,11 @@
 package items.instruments;
 
+import behaviours.IPlay;
 import items.Instrument;
 import items.InstrumentType;
 import items.instruments.instrumentEnums.PianoType;
 
-public class Piano extends Instrument {
+public class Piano extends Instrument  implements IPlay {
     PianoType pianoType;
     private int numberOfKeys;
 
@@ -23,4 +24,9 @@ public class Piano extends Instrument {
     public int getNumberOfKeys() {
         return numberOfKeys;
     }
+
+    public String play(String sound){
+        return "Playing: " + sound;
+    }
+
 }

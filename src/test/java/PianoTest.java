@@ -1,7 +1,6 @@
 import items.InstrumentType;
 import items.instruments.Piano;
 import items.instruments.instrumentEnums.PianoType;
-import items.instruments.instrumentEnums.TrumpetType;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -54,5 +53,11 @@ public class PianoTest {
     public void hasNumberOfDrums(){
         assertEquals(124, piano.getNumberOfKeys());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Playing: click click click", piano.play("click click click"));
+    }
+
 
 }

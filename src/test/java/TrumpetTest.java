@@ -54,4 +54,8 @@ public class TrumpetTest {
         assertEquals(18, cornet.getNumberOfValves());
     }
 
+    @Test
+    public void canPlay() {
+        assertEquals("Playing: whzee whzee whzee", cornet.play("whzee whzee whzee"));
+    }
 }

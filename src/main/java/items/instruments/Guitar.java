@@ -1,10 +1,11 @@
 package items.instruments;
 
+import behaviours.IPlay;
 import items.Instrument;
 import items.InstrumentType;
 import items.instruments.instrumentEnums.GuitarType;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements IPlay {
     GuitarType guitarType;
     private int numberOfStrings;
 
@@ -22,5 +23,9 @@ public class Guitar extends Instrument {
 
     public int getNumberOfStrings() {
         return numberOfStrings;
+    }
+
+    public String play(String sound){
+        return "Playing: " + sound;
     }
 }

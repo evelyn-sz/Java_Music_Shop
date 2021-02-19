@@ -54,4 +54,10 @@ public class DrumTest {
         assertEquals(12, drum.getNumberOfDrums());
     }
 
+    @Test
+    public void canPlay(){
+        assertEquals("Playing: bang bang bang", drum.play("bang bang bang"));
+    }
+
+
 }

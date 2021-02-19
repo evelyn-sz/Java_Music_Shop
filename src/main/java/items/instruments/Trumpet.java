@@ -1,10 +1,11 @@
 package items.instruments;
 
+import behaviours.IPlay;
 import items.Instrument;
 import items.InstrumentType;
 import items.instruments.instrumentEnums.TrumpetType;
 
-public class Trumpet extends Instrument {
+public class Trumpet extends Instrument  implements IPlay {
     TrumpetType trumpetType;
     private int numberOfValves;
 
@@ -23,4 +24,9 @@ public class Trumpet extends Instrument {
     public int getNumberOfValves() {
         return numberOfValves;
     }
+
+    public String play(String sound){
+        return "Playing: " + sound;
+    }
+
 }

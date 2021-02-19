@@ -1,10 +1,11 @@
 package items.instruments;
 
+import behaviours.IPlay;
 import items.Instrument;
 import items.InstrumentType;
 import items.instruments.instrumentEnums.DrumType;
 
-public class Drum extends Instrument {
+public class Drum extends Instrument implements IPlay {
     DrumType drumType;
     private int numberOfDrums;
 
@@ -22,5 +23,9 @@ public class Drum extends Instrument {
 
     public int getNumberOfDrums() {
         return numberOfDrums;
+    }
+
+    public String play(String sound){
+        return "Playing: " + sound;
     }
 }
