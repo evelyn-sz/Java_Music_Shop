@@ -1,4 +1,26 @@
 package items.instruments;
 
-public class Piano {
+import items.Instrument;
+import items.InstrumentType;
+import items.instruments.instrumentEnums.PianoType;
+
+public class Piano extends Instrument {
+    PianoType pianoType;
+    private int numberOfKeys;
+
+    public Piano(String name, double manufacturerPrice, double sellingPrice,
+                 InstrumentType instrumentType, String material, String colour,
+                 PianoType pianoType, int numberOfKeys) {
+        super(name, manufacturerPrice, sellingPrice, instrumentType, material, colour);
+        this.pianoType = pianoType;
+        this.numberOfKeys = numberOfKeys;
+    }
+
+    public PianoType getPianoType() {
+        return pianoType;
+    }
+
+    public int getNumberOfKeys() {
+        return numberOfKeys;
+    }
 }
