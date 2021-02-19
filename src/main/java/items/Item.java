@@ -22,4 +22,8 @@ public abstract class Item {
     public double getSellingPrice() {
         return sellingPrice;
     }
+
+    public double getMarkup(){
+        return this.getSellingPrice() - this.getManufacturerPrice();
+    }
 }
