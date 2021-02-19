@@ -59,5 +59,4 @@ public class PianoTest {
         assertEquals("Playing: click click click", piano.play("click click click"));
     }
 
-
 }
